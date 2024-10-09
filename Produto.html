@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Produto</title>
+</head>
+<body>
+
+
+
+    <script>
+        // Espera o carregamento completo do DOM
+        document.addEventListener("DOMContentLoaded", function() {
+            // Seleciona todas as miniaturas
+            const miniaturas = document.querySelectorAll('.miniatura');
+            const imagemPrincipal = document.getElementById('imagem-principal');
+    
+            // Adiciona um evento de clique a cada miniatura
+            miniaturas.forEach(miniatura => {
+                miniatura.addEventListener('click', function() {
+                    // Atualiza a imagem principal com a fonte da miniatura clicada
+                    const novaImagem = this.getAttribute('data-imagem');
+                    imagemPrincipal.src = novaImagem;
+                });
+            });
+        });
+    </script>
+    
+    
+    <link rel="stylesheet" href="Produto.css">
+
+
+
+    <main>
+        <section class="produto">
+           <div class="imagens-produto">
+               <img src="img/lokk.png" alt="Produto principal" class="imagem-principal"
+               id="imagem-principal">
+               <div class="miniaturas">
+                   <img src="img/look2.png" alt="miniatura 1" class="miniatura"
+                   data-imagem="img/look2.png">
+                   <img src="img/look3.png" alt="miniatura 2" class="miniatura"
+                   data-imagem="img/look3.png">
+                   <img src="img/look4.png" alt="miniatura 3" class="miniatura"
+                   data-imagem="img/look4.png">
+               </div>
+           </div>
+           <div class="detalhes-produto">
+               <h2>Nome do Produto</h2>
+               <p class="descricao">Esta é a descrição do produto. Ele é de alta qualidade e 
+                   atende ás suas necessidades.</p>
+                   <p class="preco">R$ 149,99</p>
+                   <form class="opções-compra">
+                       <label for="tamanho">Tamanho:</label>
+                       <select id="tamanho">
+                           <option>P</option>
+                           <option>M</option>
+                           <option>G</option>
+                           <option>GG</option>
+                        </select>
+                        <label for="cor">Cor:</label>
+                        <select id="cor">
+                           <option>Vermelho</option>
+                           <option>Azul</option>
+                           <option>Branco</option>
+                           <option>Preto</option>
+                           <option>Bege</option>
+                        </select>
+                        <button type="submit">Comprar</button>
+                   </form>
+           </div>
+        </section>
+                  <section class="comentarios">
+                   <h3>Cometarios dos clientes</h3>
+                   <div class="comentarios">
+                       <img src="img/maria2.png" alt="Foto de Maria" callss="foto-usuario">
+                       <p><strong>Maria:</strong> Ótimo produto, recomendo super!</p>
+                   </div>
+                   <div class="comentarios">
+                       <img src="img/ju2.png" alt="Foto de Julia" callss="foto-usuario">
+                       <p><strong>Julialima:</strong> Perfeito, achei o tecido maravilhoso!</p>
+                   </div>
+                   <div class="comentarios">
+                       <img src="img/ana2.png" alt="Foto de Ana" callss="foto-usuario">
+                       <p><strong>Ana Maria:</strong> Um look melhor que o outro...</p>
+                   </div>
+                   <div class="comentarios">
+                       <img src="img/carlos2.png" alt="Foto de Carlos" callss="foto-usuario">
+                       <p><strong>Carlos:</strong> Comprei para minha esposa e ela amou muito!</p>
+                  
+                    </div>
+                  </section>
+               </main>
+
+
+</body>
+</html>
+
+
+
